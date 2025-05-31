@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="sign_up.css">
+
+</head>
+<body class="d-flex align-items-center">
+    <!-- login -->
+    <form autocomplete="off" id="signup_form" class="mx-auto" action="">
+        <div class="sign_up bg-danger text-center mx-auto py-4 px-5 d-flex flex-column rounded-5">
+            <h1 class="text-white"><b>Sign Up</b></h1>
+            <p class="text-white align-self-start my-auto mt-3">Name</p>
+            <input id="nameId" class="border-0 rounded-2 p-2 text-danger" type="text" placeholder="Enter your name...">
+            <p class="text-white align-self-start my-auto mt-3">Password</p>
+            <input id="passwordId" class="border-0 rounded-2 p-2 text-danger" type="text" placeholder="Enter your password...">
+            <p class="text-white align-self-start my-auto mt-3">Confirm Password</p>
+            <input id="passwordConfirmId" class="border-0 rounded-2 p-2 text-danger" type="text" placeholder="Confirm your password...">
+            <p class="text-white align-self-start my-auto mt-3">Room</p>
+            <select class="border-0 rounded-2 p-2" name="" id="floor">
+                <option value="0" hidden >Floor</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+            <select class="border-0 rounded-2 p-2 mt-2" name="" id="roomNumber">
+                <option value="0" hidden>Room number</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <div class="footer mt-4 d-flex align-items-center gap-5">
+                <button class="border-0 py-2 px-5 rounded-4 text-danger submit">Submit</button>
+                <a class="text-decoration-none text-white signin" href="index.html">Already have account</a>
+            </div>
+        </form>
+    </div>
+
+    
+
+    <!-- Javascript -->
+    <script src="sign_up.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

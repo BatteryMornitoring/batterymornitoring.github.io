@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="bg-primary text-white">
+    <h1 class="text-shadow text-center pt-5 ps-5"><p>Battery Monitoring System</p></h1>
+    <!-- NAVBAR -->
+    <div class="navbar position-fixed top-0 start-0 d-flex flex-column h-100 p-0">
+        <h1 class="flex-fill m-0 align-content-center w-100 text-center px-3 soc" id="soc">SoC</h1>
+        <h1 class="flex-fill m-0 align-content-center w-100 text-center px-3 soh" id="soh">SoH</h1>
+    </div>
+    <div class="socTable mt-5" id="socTable">
+        <table class="text-center">
+            <thead class="custom-danger">
+                <th>Room</th>
+                <th>SoC</th>
+                <th>State</th>
+                <th>Information</th>
+            </thead>
+            <tbody class="bg-secondary" id="usersocContainer">
+                <!-- <tr>
+                    <td>A12</td>
+                    <td>50%</td>
+                    <td>Ổn</td>
+                    <td><a href="/">Chi tiết</a></td>
+                </tr>
+                <tr>
+                    <td>A11</td>
+                    <td>30%</td>
+                    <td>Yếu</td>
+                    <td><a href="/">Chi tiết</a></td>
+                </tr>
+                <tr>
+                    <td>A12</td>
+                    <td>50%</td>
+                    <td>Ổn</td>
+                    <td><a href="/">Chi tiết</a></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <div class="sohTable mt-5 displayTable" id="sohTable">
+        <table class="text-center">
+            <thead class="custom-danger">
+                <th>Room</th>
+                <th>SoH</th>
+                <th>State</th>
+                <th>Information</th>
+            </thead>
+            <tbody class="bg-secondary" id="usersohContainer">
+                <!-- <tr>
+                    <td>A12</td>
+                    <td>30%</td>
+                    <td>Yếu</td>
+                    <td><a href="/">Chi tiết</a></td>
+                </tr>
+                <tr>
+                    <td>A11</td>
+                    <td>20%</td>
+                    <td>Yếu</td>
+                    <td><a href="/">Chi tiết</a></td>
+                </tr>
+                <tr>
+                    <td>A13</td>
+                    <td>50%</td>
+                    <td>Tốt</td>
+                    <td><a href="/">Chi tiết</a></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    
+    <!-- Modal Chi tiết -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+            </div>
+            <div id="modal-body" class="modal-body">
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        
+        <!-- Modal Header with Close Button -->
+        <div class="modal-header">
+            <h5 class="modal-title" id="warningModalLabel">Warning</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="modal-body" id="warnmodal-body">
+            <!-- Nội dung cảnh báo sẽ được chèn ở đây bằng JS -->
+        </div>
+        
+        <!-- Modal Footer with Close Button -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- log out button -->
+    <button onclick="logout()" class=" border-0 rounded-5 bg-danger text-white changeBtn p-3 fw-bold fs-6">Log out</button>
+    <!-- confirm button -->
+    <button onclick="alter()" class=" border-0 rounded-5 bg-danger text-white in4Btn p-3 fw-bold fs-6">User In4 Altering</button>
+    <!-- warn button -->
+<button 
+    id="warnBtn"
+    data-bs-toggle="modal" 
+    data-bs-target="#warningModal"
+    class="border-0 rounded-5 bg-danger text-white warnBtn p-3 fw-bold fs-6">
+    <b>WARN</b>
+</button>
+<!-- icon cnahr báo -->
+<div id="warn-indicator" class="warn"></div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+    <!-- Javascript -->
+    <script src="admin.js"></script>
+</body>
+</html>

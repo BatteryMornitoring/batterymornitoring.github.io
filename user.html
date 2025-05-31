@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="user.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-primary">
+
+    <!-- Header -->
+    <div class="avatar mainBackground d-flex align-items-center justify-content-center gap-4 text-white">
+        <i class="fa-solid fa-user ava"></i>
+        <p id="avaName" class="m-0"></p>
+        <p id="avaRoom" class="m-0"></p>
+        <div class="button">
+            <button onclick="changeBtn()"
+                class=" border-0 rounded-5 bg-danger text-white changeBtn p-3 fw-bold fs-6">Change Information</button>
+            <button onclick="logout()" class=" border-0 rounded-5 bg-danger text-white changeBtn p-3 fw-bold fs-6">Log
+                out</button>
+        </div>
+    </div>
+
+    <!-- chart library -->
+    <div class="d-flex flex-row-reverse mt-4 ms-5">
+        <div class="chart-wrapper">
+            <canvas id="combinedChart" class="text-center"></canvas> <!-- Biểu đồ gộp SoC, SoH, Temp -->
+        </div>
+        <div class="specifications text-start mainBackground1 w-25 text-white align-self-center">
+            <ul class="py-3 fs-3 m-0">
+                <li class="list-unstyled">SoC: <span id="socData"></span> %
+                    <i class="fa-solid fa-triangle-exclamation fs-1" id="warning-soc"></i>
+                </li>
+                <li class="list-unstyled">SoH: <span id="sohData"></span> %
+                    <i class="fa-solid fa-triangle-exclamation fs-1" id="warning-soh"></i>
+                </li>
+                <li class="list-unstyled">Temp: <span id="tempData"></span> °C
+                    <i class="fa-solid fa-triangle-exclamation fs-1" id="warning-temp"></i>
+                </li>
+                <li class="list-unstyled">Used: <span id="usedData"></span> </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="copyright text-white text-center">
+        <p class="m-0 mt-3">&copy; 2025 Hcmute. All rights reserved.</p>
+        <p class="text-white"><a class="text-white" href="/">Privacy Policy</a> | <a class="text-white"
+                href="/">Terms</a></p>
+    </div>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <!-- chart library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <!-- Javascript -->
+    <script src="user.js"></script>
+</body>
+
+</html>

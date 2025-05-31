@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="informationUser.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="d-flex align-items-center">
+    <!-- Application -->
+    <form autocomplete="off" id="in4_form" class="mx-auto" action="">
+        <div class="sign_up text-center mx-auto py-4 px-5 d-flex flex-column rounded-5 form1">
+            <h1 class="text-white"><b>User Infomation</b></h1>
+
+            <div class="row1 d-flex gap-5">
+                <div class="col1">
+                    <p class="text-white text-start fs-5 my-auto mt-3">Name</p>
+                    <input id="nameId" class="border-0 rounded-2 p-2 text-danger" type="text"
+                        placeholder="Enter your name...">
+                    <p class="text-white text-start fs-5 my-auto mt-3">Password</p>
+                    <input id="passwordId" class="border-0 rounded-2 p-2 text-danger" type="text"
+                        placeholder="Enter your password...">
+                    <p class="text-white text-start fs-5 my-auto mt-3">Confirm Password</p>
+                    <input id="passwordConfirmId" class="border-0 rounded-2 p-2 text-danger" type="text"
+                        placeholder="Confirm your password...">
+                </div>
+                <div class="col2">
+                    <p class="text-white text-start fs-5 my-auto mt-3">Email</p>
+                    <input id="emailId" class="border-0 rounded-2 p-2 text-danger" type="text"
+                        placeholder="Enter your email...">
+                    <p class="text-white text-start fs-5 my-auto mt-3">Phone Number</p>
+                    <input id="phoneNumberId" class="border-0 rounded-2 p-2 text-danger" type="text"
+                        placeholder="Enter your number...">
+                    <p class="text-white text-start fs-5 my-auto mt-3">Reason Change</p>
+                    <select class="border-0 rounded-2 p-2 w-100" name="" id="reasons">
+                        <option class="w-100" value="0" hidden>Reason Change...</option>
+                        <option value="newOwner">New Owner</option>
+                        <option value="security">Security</option>
+                        <option value="In4Updating">Information Updating</option>
+                        <option value="tenant">Tenant</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <button class="border-0 py-2 px-5 rounded-4 submit mt-4 fs-2"><b>Submit</b></button>
+            <!-- button go back -->
+            <button onclick="gobackBtn()"
+                class=" border-0 rounded-3 bg-danger text-white goBack p-3 fw-bold fs-3">X</button>
+
+        </div>
+    </form>
+    <!-- Javascript -->
+    <script src="informationUser.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
