@@ -33,7 +33,7 @@ body {
 }
 
 .ava {
-    font-size: 40px;  
+    font-size: 40px;
     margin-left: 25px;
 }
 
@@ -79,6 +79,7 @@ body {
 .mainBackground1 {
     background-color: rgba(220, 53, 69, 0.8);
     backdrop-filter: blur(100px);
+    margin-right: 50px; 
 }
 
 .chart-wrapper {
@@ -88,6 +89,7 @@ body {
     width: 60%;
     /* Điều chỉnh chiều rộng container biểu đồ */
     margin: 0 auto;
+    margin-right: 40px; 
 }
 
 canvas {
@@ -105,4 +107,4 @@ canvas {
 .specifications {
     height: fit-content;
     border-radius: 10px;
-} 
+}

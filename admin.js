@@ -65,7 +65,7 @@ function updateTablesFromLocalStorage() {
         const roomId = `${user.floor}${user.room}`;
         if (user.soc < 30 && user.soc !== null) warningMessages.push(`${roomId} (${user.soc}%): SoC crossed the threshold`);
         if (user.soh === 0) warningMessages.push(`${roomId} (${user.soh}%): SoH crossed the threshold`);
-        if (user.temp > 60) warningMessages.push(`${roomId} (${user.temp}°C): Temp crossed the threshold`);
+        if (user.temp > 50) warningMessages.push(`${roomId} (${user.temp}°C): Temp crossed the threshold`);
 
         let soctr = document.createElement('tr');
         soctr.innerHTML = `
@@ -114,7 +114,7 @@ function updateTablesFromLocalStorage() {
         const used = parseInt(btn.getAttribute('data-used'), 10) || 0;
 
         const titleEl = exampleModal.querySelector('.modal-title');
-        titleEl.textContent = `Thông tin căn ${roomId}`;
+        titleEl.textContent = `Information about apartment ${roomId}`;
 
         const bodyEl = exampleModal.querySelector('.modal-body');
         bodyEl.innerHTML = `

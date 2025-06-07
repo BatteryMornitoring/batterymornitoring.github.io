@@ -18,19 +18,27 @@ function display() {
                 <p><b>Reasons:</b> <span>${user.reasons}</span></p>
             `;
 
+            let btnWrapper = document.createElement('div');
+            btnWrapper.classList.add('buttons-wrapper');
+            
             // Accept button
             let acceptBtn = document.createElement('button');
-            acceptBtn.classList.add('boxBtn', 'border-0', 'px-5', 'py-2', 'rounded-3', 'bg-danger', 'text-white', 'ms-5');
+            acceptBtn.classList.add('boxBtn', 'border-0', 'px-5', 'py-2', 'rounded-3', 'bg-danger', 'text-white');
             acceptBtn.innerHTML = 'Accept';
             acceptBtn.onclick = () => acceptFunc(user);
-            div.appendChild(acceptBtn);
-
+            
             // Deny button
             let denyBtn = document.createElement('button');
-            denyBtn.classList.add('boxBtn', 'border-0', 'px-5', 'py-2', 'rounded-3', 'bg-danger', 'text-white', 'ms-4');
+            denyBtn.classList.add('boxBtn', 'border-0', 'px-5', 'py-2', 'rounded-3', 'bg-danger', 'text-white');
             denyBtn.innerHTML = 'Deny';
             denyBtn.onclick = () => denyFunc(user);
-            div.appendChild(denyBtn);
+            
+            // Thêm nút vào wrapper
+            btnWrapper.appendChild(acceptBtn);
+            btnWrapper.appendChild(denyBtn);
+            
+            // Thêm wrapper vào div
+            div.appendChild(btnWrapper);
 
             container.appendChild(div);
         }

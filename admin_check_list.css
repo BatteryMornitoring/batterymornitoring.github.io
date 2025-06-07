@@ -63,7 +63,7 @@ body {
 
 .buttons-wrapper {
     display: flex;
-    justify-content: center;  /* căn giữa theo ngang */
-    gap: 20px;                /* khoảng cách giữa 2 nút */
-    margin-top: 20px;         /* khoảng cách trên với nội dung */
-  }
+    justify-content: center;  /* hoặc 'flex-start' nếu muốn căn trái */
+    gap: 20px;
+    margin-top: 10px;         /* khoảng cách với nội dung phía trên */
+}
