@@ -98,7 +98,7 @@ canvas {
     border-radius: 10px;
     max-width: 100%;
     /* Giữ chiều rộng tối đa là 100% */
-    height: auto;
+    max-height: 55vh;
     /* Chiều cao tự động thay đổi theo tỷ lệ */
     width: 100%;
     /* Đảm bảo biểu đồ chiếm toàn bộ chiều rộng của container */
@@ -108,3 +108,4 @@ canvas {
     height: fit-content;
     border-radius: 10px;
 }
+
