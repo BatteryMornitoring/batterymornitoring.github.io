@@ -90,7 +90,7 @@ function updateTablesFromLocalStorage() {
         sohtr.innerHTML = `
             <td>${roomId}</td>
             <td>${user.soh !== null ? user.soh + '%' : 'The system has not been installed yet' }</td>
-            <td>${user.soh === null? 'The system has not been installed yet': user.soh < 30? 'Low': 'High'}</td>
+            <td>${user.soh === null? 'The system has not been installed yet': user.soh ===0? 'Low': 'High'}</td>
             <td><a href="#" class="btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal"
                 data-floorroom="${roomId}"
                 data-name="${user.name}"
